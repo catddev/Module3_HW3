@@ -89,7 +89,53 @@ start:
 	break;
 	case 5:
 	{
+		int bg, font;
+		printf("\nCHOOSE BACKGROUND COLOR:\n1-light green \n2-light blue \n3-light red \n4-light yellow \n5-bright white\n\n");
+		scanf("%d", &bg);
+		printf("CHOOSE FONT COLOR:\n0-black \n1-dark blue \n2-green \n3-blue \n4-red \n5-magenta\n\n");
+		scanf("%d", &font);
 
+		if (bg == 1) system("color A0");
+		else if (bg == 2) system("color B0");
+		else if (bg == 3) system("color C0");
+		else if (bg == 4) system("color E0");
+		else if (bg == 5) system("color F0");
+
+		if (font == 0)
+		{
+			SetConsoleTextAttribute(hConsole, 0);
+			printf("COLORS HAVE BEEN CHANGED!\n");
+		}
+		else if (font == 1)
+		{
+			SetConsoleTextAttribute(hConsole, 1);
+			printf("COLORS HAVE BEEN CHANGED!\n");
+		}
+		else if (font == 2)
+		{
+			SetConsoleTextAttribute(hConsole, 2);
+			printf("COLORS HAVE BEEN CHANGED!\n");
+		}
+		else if (font == 3)
+		{
+			SetConsoleTextAttribute(hConsole, 3);
+			printf("COLORS HAVE BEEN CHANGED!\n");
+		}
+		else if (font == 4)
+		{
+			SetConsoleTextAttribute(hConsole, 4);
+			printf("COLORS HAVE BEEN CHANGED!\n");
+		}
+		else if (font == 5)
+		{
+			SetConsoleTextAttribute(hConsole, 5);
+			printf("COLORS HAVE BEEN CHANGED!\n");
+		}
+		else
+		{
+			SetConsoleTextAttribute(hConsole, 7);
+			printf("COLORS HAVE BEEN CHANGED!\n");
+		}
 	}
 	break;
 	case 6:
